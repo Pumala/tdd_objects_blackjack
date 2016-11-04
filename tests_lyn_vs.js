@@ -119,10 +119,10 @@ describe('Deck', function() {
 
   it('should return new shuffled deck of cards', function() {
     var myDeck = new Deck();
-    var currentDeck = newDeck();
+    var currentDeck = newDeck().splice(0, 4);
     console.log(currentDeck);
     myDeck.shuffle();
-    var shuffledDeck = myDeck.deck;
+    var shuffledDeck = myDeck.deck.splice(0, 4);
     expect(currentDeck).not.toEqual(shuffledDeck);
     console.log(shuffledDeck);
   });
